@@ -8,7 +8,8 @@ chrome.webRequest.onErrorOccurred.addListener(
 			data.error === "net::ERR_FILE_NOT_FOUND" ||
 			data.error === "net::ERR_CACHE_MISS" ||
 			data.error === "net::ERR_ABORTED" ||
-			data.error === "net::ERR_CERT_COMMON_NAME_INVALID" // alright the list is getting bigger, ill do something better soon.
+			data.error === "net::ERR_CERT_COMMON_NAME_INVALID" || // alright the list is getting bigger, ill do something better soon.
+			data.error === "net::ERR_CONNECTION_REFUSED"
 		) {
 			return;
 		}
