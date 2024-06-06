@@ -6,7 +6,8 @@ chrome.webRequest.onErrorOccurred.addListener(
 		if (
 			data.error === "net::ERR_BLOCKED_BY_CLIENT" ||
 			data.error === "net::ERR_FILE_NOT_FOUND" ||
-			data.error === "net::ERR_CACHE_MISS"
+			data.error === "net::ERR_CACHE_MISS" ||
+			data.error === "net::ERR_ABORTED"
 		) {
 			return;
 		}
