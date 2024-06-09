@@ -12,7 +12,8 @@ chrome.webRequest.onErrorOccurred.addListener(
       data.error === "net::ERR_CONNECTION_REFUSED" ||
       data.error === "net::ERR_CERT_AUTHORITY_INVALID" ||
       data.error === "net::ERR_FAILED" ||
-      data.error == "net::ERR_BLOCKED_BY_RESPONSE"
+      data.error === "net::ERR_BLOCKED_BY_RESPONSE" ||
+      data.error === "net::ERR_BLOCKED_BY_ORB"
     ) {
       return;
     }
