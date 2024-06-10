@@ -16,6 +16,7 @@ chrome.webRequest.onErrorOccurred.addListener(
 			"net::ERR_BLOCKED_BY_RESPONSE",
 			"net::ERR_BLOCKED_BY_ORB",
 			"net::ERR_SSL_PROTOCOL_ERROR",
+			"net::ERR_INVALID_CHUNKED_ENCODING",
 		]);
 
 		if (ignore.has(data.error)) {
